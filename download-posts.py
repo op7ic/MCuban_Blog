@@ -37,7 +37,7 @@ for page in page_numbers():
         page = x['content']['rendered']
         soup = BeautifulSoup(title, "html.parser")
         soup2 = BeautifulSoup(page, "html.parser")
-        fileName = "posts/%s-%s.pdf" % (date, remove_non_ascii(soup.text))
+        fileName = "%s-%s.pdf" % (date, remove_non_ascii(soup.text))
         convert_html_to_pdf(page,fileName)
 
 #print("posts:", len(posts))
