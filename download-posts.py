@@ -10,7 +10,7 @@ def remove_non_ascii(a_str):
 
 
 def convert_html_to_pdf(source_html, output_filename):
-    result_file = open(output_filename, "w+b")
+    result_file = open("posts/"+output_filename, "w+b")
     pisa_status = pisa.CreatePDF(
             source_html,      
             dest=result_file)
